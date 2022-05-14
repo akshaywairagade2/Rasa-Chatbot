@@ -1,0 +1,173 @@
+version: "3.1"
+
+nlu:
+
+- intent: supply_contact_info
+  examples: |
+    - My name is [John](name). email's [john@email.com](email)
+    - name: [David](name) email: [david@email.com](email)
+    - Yeah sure. I'm [Barbara](name). My email is [barbara@email.com](email)
+    - [Susan](name), [susan@email.com](email)
+    - Sure. It's [Fred](name). My email is [fred@email.com](email).
+
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+# Recurring Deposits Intents
+- intent: ask_define_recurring_deposit
+  examples: |
+    - What is recurring deposit
+    - Recurring deposit
+    - Define recurring deposit
+
+- intent: ask_features_recurring_deposit
+  examples: |
+    - What are features of recurring deposit
+    - charactersitics of recurring deposit
+    - properties of recurring deposit
+
+- intent: ask_eligibility_recurring_deposit
+  examples: |
+    - What are the eligibility of recurring deposit
+    - qualifiaction for recurring deposit
+    - acceptability for recurring deposit
+
+#Savings Account
+- intent: ask_define_savings_account_types
+  examples: |
+    - What is savings account
+    - Types of savings account
+    - savings account and its types
+    - different types of savings account
+
+- intent: ask_opening_saving_account
+  examples: |
+    - how to open savings account
+    - procedure to open savings account
+
+- intent: ask_minimum_balance_saving_account
+  examples: |
+    - What is the minimum balance to open a savings account
+    - least money required to open savings bank account
+
+- intent: ask_documents_required_for_savings_account
+  examples: |
+    - documents required to open a Savings Account
+    - what documents must I have for opening savings account
+    - what documents are required to open account
+
+- intent: ask_transfer_money_from_savings_account
+  examples: |
+    - how can one tranfer money from savings account
+    - way to transfer money from savings account
+    - procedure applied for transfer of money through savings account
+
+#Public Provident Fund
+- intent: ask_define_public_provident_fund
+  examples: |
+    - define public provident fund
+    - what is public provident fund
+    - define ppf
+    - what is ppf
+
+- intent: ask_features_public_provident_fund
+  examples: |
+    - what are the features of public provident fund
+    - what are the features of ppf
+    - characteristics of public provident fund
+    - characteristics of ppf
+    - properties of public provident fund
+    - properties of ppf
+
+- intent: ask_eligibility_public_provident_fund
+  examples: |
+    - eligibility for public provident fund
+    - eligibility for ppf
+    - requirements for public provident fund
+    - requirements for ppf
