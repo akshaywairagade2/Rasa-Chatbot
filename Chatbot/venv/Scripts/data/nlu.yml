@@ -171,3 +171,46 @@ nlu:
     - eligibility for ppf
     - requirements for public provident fund
     - requirements for ppf
+
+- intent: ask_interest_rate_public_provident_fund
+  examples: |
+    - what is the interest rate of public provident fund
+    - what is the interest rate of ppf
+
+- intent: ask_time_period_public_provident_fund
+  examples: |
+    - what is the maturity period of public provident fund
+    - what is the extension period of public provident fund
+    - what is the maturity period of ppf
+    - what is the extension period of ppf
+    - what is tenure of ppf
+    - waht is tenure of public provident fund
+
+- intent: ask_deposit_public_provident_fund
+  examples: |
+    - what is the deposit for public provident fund
+    - what is the minimum deposit for public provident fund
+    - what is the maximum deposit for public provident fund
+    - what is the deposit for ppf
+    - what is the minimum deposit for ppf
+    - what is the maximum deposit for ppf
+
+- intent: ask_fine_public_provident_fund
+  examples: |
+    - what is the fine attracted if money not deposited public provident fund
+    - what is the fine attracted if money not deposited ppf
+
+- intent: ask_loan_facility_public_provident_fund
+  examples: |
+    - What are the loan facility available for public provident fund
+    - What are the partial withdrawals available for public providnet fund
+
+- intent: ask_transfer_ppf_to_hdfc_public_provident_fund
+  examples: |
+    - How can I transfer my public provident fund account to hdfc account
+    - How can I transfer my ppf account to hdfc account
+ 
+#  - intent: ask_open_public_provident_fund
+#   examples: |
+#     - How to open public provident fund
+#     - How to open ppf

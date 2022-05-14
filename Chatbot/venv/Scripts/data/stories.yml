@@ -96,3 +96,38 @@ stories:
   steps:
   - intent: ask_eligibility_public_provident_fund
   - action: utter_eligibility_public_provident_fund
+
+- story:  story_ask_interest_rate_public_provident_fund
+  steps:
+  - intent: ask_interest_rate_public_provident_fund
+  - action: utter_interest_rate_public_provident_fund
+
+- story:  story_ask_time_period_public_provident_fund
+  steps:
+  - intent: ask_time_period_public_provident_fund
+  - action: utter_time_period_public_provident_fund
+
+- story:  story_ask_deposit_public_provident_fund
+  steps:
+  - intent: ask_deposit_public_provident_fund
+  - action: utter_deposit_public_provident_fund
+
+- story:  story_ask_fine_public_provident_fund
+  steps:
+  - intent: ask_fine_public_provident_fund
+  - action: utter_fine_public_provident_fund
+
+- story:  story_ask_loan_facility_public_provident_fund
+  steps:
+  - intent: ask_loan_facility_public_provident_fund
+  - action: utter_loan_facility_public_provident_fund
+
+- story:  story_transfer_ppf_to_hdfc_public_provident_fund
+  steps:
+  - intent: ask_transfer_ppf_to_hdfc_public_provident_fund
+  - action: utter_transfer_ppf_to_hdfc_public_provident_fund
+
+- story:  story_ask_open_public_provident_fund
+  steps:
+  - intent: ask_open_public_provident_fund
+  - action: utter_open_public_provident_fund

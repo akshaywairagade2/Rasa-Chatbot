@@ -23,6 +23,13 @@ intents:
   - ask_define_public_provident_fund
   - ask_features_public_provident_fund
   - ask_eligibility_public_provident_fund
+  - ask_interest_rate_public_provident_fund
+  - ask_time_period_public_provident_fund
+  - ask_deposit_public_provident_fund
+  - ask_fine_public_provident_fund
+  - ask_loan_facility_public_provident_fund
+  - ask_transfer_ppf_to_hdfc_public_provident_fund
+  - ask_open_public_provident_fund
 
 entities:
   - name
@@ -135,6 +142,37 @@ No joint PPF accounts are allowed.
 Non-resident Indians (NRIs) are not eligible to open an account under the Public Provident Fund Scheme. However, a resident who becomes an NRI during the 15 years' tenure prescribed under Public Provident Fund Scheme may continue to subscribe to the fund until its maturity on a non-repatriation basis.
 An individual can open only one PPF account and declare the same at the time of account opening.
 "
+  utter_interest_rate_public_provident_fund:
+  - text: "Attractive Interest Rate of 7.1 % that is fully exempt from tax under Section 80C"
+
+  utter_time_period_public_provident_fund:
+  - text: "Good long term investment for 15 years.
+Account can be extended for a block of 5 years after maturity.
+"
+  utter_deposit_public_provident_fund:
+  - text: "Minimum deposit amount of Rs 500/- and maximum of Rs 1,50,000/- in a Financial Year.
+Maximum limit of Rs 1,50,000/- as mentioned above is combined limit for deposit made by Individual in own account and in account opened on behalf of minor
+"
+  utter_fine_public_provident_fund:
+  - text: "If the minimum amount of Rs 500/- is not deposited in any financial year , a penalty of Rs 50/- will be charged."
+
+  utter_loan_facility_public_provident_fund:
+  - text: "Option for loan facility and partial withdrawals:
+50% of the balance can be withdrawn after expiry of 5 years, excluding the first financial year .
+Loan facility can be availed any time between third financial year to sixth financial year i.e. From third financial year up to end of fifth financial year
+"
+  utter_transfer_ppf_to_hdfc_public_provident_fund:
+  - text: "PPF account can be transferred from other bank or Post office to HDFC Bank. In such case, the PPF account will be considered as a continuing account. Below is the process to be followed :
+Customer requires to submit PPF transfer request in the bank/post office where PPF account is held
+The existing bank/Post office will arrange to send the necessary documents along with cheque/DD of the outstanding balance in the PPF account to HDFC Bank branch address provided by the customer
+Process at HDFC Bank Branch
+Once PPF transfer in documents are received at HDFC Bank, branch official will intimate customer about the receipt of documents.
+The customer is required to visit the branch to complete the transfer formalities.
+"
+  utter_open_public_provident_fund:
+  - text: "Open digitally with https://netbanking.hdfcbank.com/netbanking/ or got to your nearest bank"
+
+
 
 session_config:
   session_expiration_time: 60

@@ -44,7 +44,16 @@ def question_answer(question, text):
     
     print("\nPredicted answer:\n{}".format(answer.capitalize()))
 
-text = input("Please enter your text: \n")
+text = '''Features
+The FlexiPay - Buy Now Pay Later offers a plethora of features and benefits to meet your every requisite. 
+First of Its Kind: No Extra Cost for 15 days.
+Zero Charges: Zero Convenience Fees, Zero Processing Fees and No Hidden Charges. 
+Anytime Anywhere Credit: Extra cash available 24*7. Enjoy the convenience of availing a credit line from Rs. 1,000 up to Rs. 20,000 instantly. 
+Flexible Repayment: FlexiPay comes with pay later options that have convenient repayment tenures. Choose repayment starting from 15 days. 
+Flexible Repayment Tenure: Select tenure starting from 15 days up to 90 days at nominal charges per month
+Hassle-Free Pay Offs: Pay your utilised principal and interest at the end of your preferred tenure. 
+Eligibility
+Only pre-approved current account and savings account holding customers of HDFC Bank are eligibile for FlexiPay facility.'''
 question = input("\nPlease enter your question: \n")
 while True:
     question_answer(question, text)
