@@ -1,40 +1,35 @@
-version: "3.1"
-
+version: '3.1'
 intents:
-  - greet
-  - supply_contact_info
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-  #Recurring deposit intents
-  - ask_eligibility_recurring_deposit
-  - ask_features_recurring_deposit
-  - ask_define_recurring_deposit
-  #Savings Account
-  - ask_define_savings_account_types
-  - ask_opening_saving_account
-  - ask_minimum_balance_saving_account
-  - ask_documents_required_for_savings_account
-  - ask_transfer_money_from_savings_account
-  #Public Provident Fund
-  - ask_define_public_provident_fund
-  - ask_features_public_provident_fund
-  - ask_eligibility_public_provident_fund
-  - ask_interest_rate_public_provident_fund
-  - ask_time_period_public_provident_fund
-  - ask_deposit_public_provident_fund
-  - ask_fine_public_provident_fund
-  - ask_loan_facility_public_provident_fund
-  - ask_transfer_ppf_to_hdfc_public_provident_fund
-  - ask_open_public_provident_fund
-
+- affirm
+- ask_define_public_provident_fund
+- ask_define_recurring_deposit
+- ask_define_savings_account_types
+- ask_deposit_public_provident_fund
+- ask_documents_required_for_savings_account
+- ask_eligibility_public_provident_fund
+- ask_eligibility_recurring_deposit
+- ask_features_public_provident_fund
+- ask_features_recurring_deposit
+- ask_fine_public_provident_fund
+- ask_interest_rate_public_provident_fund
+- ask_loan_facility_public_provident_fund
+- ask_minimum_balance_saving_account
+- ask_open_public_provident_fund
+- ask_opening_saving_account
+- ask_time_period_public_provident_fund
+- ask_transfer_money_from_savings_account
+- ask_transfer_ppf_to_hdfc_public_provident_fund
+- bot_challenge
+- deny
+- goodbye
+- greet
+- mood_great
+- mood_unhappy
+- supply_contact_info
 entities:
-  - name
-  - email
-
+- email
+- account_type
+- name
 slots:
   name:
     type: text
@@ -46,136 +41,96 @@ slots:
     mappings:
     - type: from_entity
       entity: email
-
+  account_type:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: account_type
 responses:
   utter_how_may_I_hep_you:
-  - text: "How may I help you"
-
+  - text: How may I help you
   utter_ask_for_contact_info:
-  - text: "Hello! Could you please provide your contact information?"
-
+  - text: Hello! Could you please provide your contact information?
   utter_acknowledge_provided_info:
-  - text: "Thanks for providing your info!"
-
-
+  - text: Thanks for providing your info!
   utter_greet:
-  - text: "Hey! How are you?"
-
+  - text: Hey! How are you?
   utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
   utter_did_that_help:
-  - text: "Did that help you?"
-
+  - text: Did that help you?
   utter_happy:
-  - text: "Great, carry on!"
-
+  - text: Great, carry on!
   utter_goodbye:
-  - text: "Bye"
-
+  - text: Bye
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
-
-  # Recurring Deposit responses
+  - text: I am a bot, powered by Rasa.
   utter_define_recurring_deposit:
-  - text: "A recurring deposit means making regular deposits. It is a service provided by many banks where people can make regular deposits and earn decent returns on their investments"
-
+  - text: A recurring deposit means making regular deposits. It is a service provided by many banks where people can make regular deposits and earn decent returns on their investments
   utter_features_recurring_deposit:
-  - text: "An investment as small as Rs. 1000 (and in multiples of Rs. 100 there after) or as large as Rs. 1,99,99,900 per month \n 
-  A minimum tenure of 6 months (and in multiples of 3 months thereafter) up to a maximum tenure of 10 years.\n
-  For a much smaller investment per month, get interest rates equal to that of regular Fixed Deposits."
-
+  - text: |-
+      An investment as small as Rs. 1000 (and in multiples of Rs. 100 there after) or as large as Rs. 1,99,99,900 per month 
+       A minimum tenure of 6 months (and in multiples of 3 months thereafter) up to a maximum tenure of 10 years.
+       For a much smaller investment per month, get interest rates equal to that of regular Fixed Deposits.
   utter_eligibility_recurring_deposit:
-  - text: "Resident individuals\nHindu Undivided Families\nPrivate & Public Limited Companies\nTrust & Societies."
-
-  #savings account
+  - text: |-
+      Resident individuals
+      Hindu Undivided Families
+      Private & Public Limited Companies
+      Trust & Societies.
   utter_define_saving_account_types:
-  - text: "A Savings Account is a deposit account opted for by many who wish to save a certain part of their earnings. It is a type of bank account wherein you can park your funds, earn interest on the same and also withdraw money at any time. It provides the convenience of liquid funds.\nTypes of savings account are:-\n1.)Open Basic Savings Bank Deposit Account.\n2.)DigiSave Youth Account.\n3.)Government Scheme Beneficiary Savings Account\n4.)Insta Account\n5.)Institutional Savings Account\n6.)Kids Advantage Account\n7.)Regular Savings Account\n8.)Saving Farmers Account\n9.)Savings Max Account\n10.)Senior Citizen's account\n11.)Super Kids Saving Account\n12.)Women's Saving Account."
-
+  - text: |-
+      A Savings Account is a deposit account opted for by many who wish to save a certain part of their earnings. It is a type of bank account wherein you can park your funds, earn interest on the same and also withdraw money at any time. It provides the convenience of liquid funds.
+      Types of savings account are:-
+      1.)Open Basic Savings Bank Deposit Account.
+      2.)DigiSave Youth Account.
+      3.)Government Scheme Beneficiary Savings Account
+      4.)Insta Account
+      5.)Institutional Savings Account
+      6.)Kids Advantage Account
+      7.)Regular Savings Account
+      8.)Saving Farmers Account
+      9.)Savings Max Account
+      10.)Senior Citizen's account
+      11.)Super Kids Saving Account
+      12.)Women's Saving Account.
   utter_open_savings_account:
-  - text: "The online Savings Account opening process is a simple and fairly easy one. At HDFC Bank, you can also opt for the Video KYC (Know Your Customer) facility to avoid an in-person visit to the bank branch."
-
+  - text: The online Savings Account opening process is a simple and fairly easy one. At HDFC Bank, you can also opt for the Video KYC (Know Your Customer) facility to avoid an in-person visit to the bank branch.
   utter_minimum_savings_account:
-  - text: "The minimum balance requirement or average monthly balance (AMB) requirement varies with the type of Savings Account chosen by the customer as well as the location of the account holder. For instance, a minimum initial deposit of Rs 7500 for metro/urban branches, Rs 5,000 for semi-urban branches and Rs 2,500 for rural branches is required to open an HDFC Bank Regular Savings Account."
-
+  - text: The minimum balance requirement or average monthly balance (AMB) requirement varies with the type of Savings Account chosen by the customer as well as the location of the account holder. For instance, a minimum initial deposit of Rs 7500 for metro/urban branches, Rs 5,000 for semi-urban branches and Rs 2,500 for rural branches is required to open an HDFC Bank Regular Savings Account.
   utter_documents_savings_account:
-  - text: "Listed below are the documents one must keep handy when applying for an HDFC Bank Savings Account:
-Identity Proof (driver’s license, passport etc.)
-Address Proof (driver’s license, passport etc.)
-PAN card
-Form 16, which is a certificate issued by the applicant’s employer, asserting that TDS has been deducted from your salary. This is needed here if the applicant does not have a PAN card.
-Two recent passport-sized photographs
+  - text: |-
+      Listed below are the documents one must keep handy when applying for an HDFC Bank Savings Account: Identity Proof (driver’s license, passport etc.) Address Proof (driver’s license, passport etc.) PAN card Form 16, which is a certificate issued by the applicant’s employer, asserting that TDS has been deducted from your salary. This is needed here if the applicant does not have a PAN card. Two recent passport-sized photographs
 
-
-Here is a list of acceptable identity/address proof documents.
-Valid Passport
-Voter's Identity Card issued by the Election Commission of India
-Valid Permanent Driving license
-Aadhaar
-Job card issued by NREGA duly signed by an officer of the State Government
-Letter issued by the National Population Register containing details of name and address
-"
+      Here is a list of acceptable identity/address proof documents. Valid Passport Voter's Identity Card issued by the Election Commission of India Valid Permanent Driving license Aadhaar Job card issued by NREGA duly signed by an officer of the State Government Letter issued by the National Population Register containing details of name and address 
   utter_transfer_money_savings_account:
-  - text: "There are couple of ways to transfer money from your saving bank account. Firstly, you can use a banking mobile app to transfer funds almost instantly, from your Savings Account to that of another individual. Then there is the option of using NetBanking facility to transfer money quickly and easily via the digital mode. You also have the option of visiting a bank branch in person and transferring funds from your bank account."
-  
-  #Public Provident Fund
+  - text: There are couple of ways to transfer money from your saving bank account. Firstly, you can use a banking mobile app to transfer funds almost instantly, from your Savings Account to that of another individual. Then there is the option of using NetBanking facility to transfer money quickly and easily via the digital mode. You also have the option of visiting a bank branch in person and transferring funds from your bank account.
   utter_define_public_provident_fund:
-  - text: "Public Provident Fund (PPF) scheme is a popular long term investment option backed by Government of India which offers safety with attractive interest rate and returns that are fully exempted from Tax."
-
+  - text: Public Provident Fund (PPF) scheme is a popular long term investment option backed by Government of India which offers safety with attractive interest rate and returns that are fully exempted from Tax.
   utter_features_public_provident_fund:
-  - text: "Attractive Interest Rate of 7.1 % that is fully exempt from tax under Section 80C.
-Good long term investment for 15 years.
-Account can be extended for a block of 5 years after maturity.
-Minimum deposit amount of Rs 500/- and maximum of Rs 1,50,000/- in a Financial Year.
-Maximum limit of Rs 1,50,000/- as mentioned above is combined limit for deposit made by Individual in own account and in account opened on behalf of minor
-If the minimum amount of Rs 500/- is not deposited in any financial year , a penalty of Rs 50/- will be charged.
-Passbook will be issued to customers
-PPF can be transferred from other bank / post office to HDFC Bank
-Option for loan facility and partial withdrawals:
-50% of the balance can be withdrawn after expiry of 5 years, excluding the first financial year .
-Loan facility can be availed any time between third financial year to sixth financial year i.e. From third financial year up to end of fifth financial year
-"
+  - text: 'Attractive Interest Rate of 7.1 % that is fully exempt from tax under Section 80C. Good long term investment for 15 years. Account can be extended for a block of 5 years after maturity. Minimum deposit amount of Rs 500/- and maximum of Rs 1,50,000/- in a Financial Year. Maximum limit of Rs 1,50,000/- as mentioned above is combined limit for deposit made by Individual in own account and in account opened on behalf of minor If the minimum amount of Rs 500/- is not deposited in any financial year , a penalty of Rs 50/- will be charged. Passbook will be issued to customers PPF can be transferred from other bank / post office to HDFC Bank Option for loan facility and partial withdrawals: 50% of the balance can be withdrawn after expiry of 5 years, excluding the first financial year . Loan facility can be availed any time between third financial year to sixth financial year i.e. From third financial year up to end of fifth financial year '
   utter_eligibility_public_provident_fund:
-  - text: "Account can be opened by Resident Individuals and Individuals on behalf of minor of whom he is guardian.
-No joint PPF accounts are allowed.
-Non-resident Indians (NRIs) are not eligible to open an account under the Public Provident Fund Scheme. However, a resident who becomes an NRI during the 15 years' tenure prescribed under Public Provident Fund Scheme may continue to subscribe to the fund until its maturity on a non-repatriation basis.
-An individual can open only one PPF account and declare the same at the time of account opening.
-"
+  - text: "Account can be opened by Resident Individuals and Individuals on behalf of minor of whom he is guardian. No joint PPF accounts are allowed. Non-resident Indians (NRIs) are not eligible to open an account under the Public Provident Fund Scheme. However, a resident who becomes an NRI during the 15 years' tenure prescribed under Public Provident Fund Scheme may continue to subscribe to the fund until its maturity on a non-repatriation basis. An individual can open only one PPF account and declare the same at the time of account opening. "
   utter_interest_rate_public_provident_fund:
-  - text: "Attractive Interest Rate of 7.1 % that is fully exempt from tax under Section 80C"
-
+  - text: Attractive Interest Rate of 7.1 % that is fully exempt from tax under Section 80C
   utter_time_period_public_provident_fund:
-  - text: "Good long term investment for 15 years.
-Account can be extended for a block of 5 years after maturity.
-"
+  - text: 'Good long term investment for 15 years. Account can be extended for a block of 5 years after maturity. '
   utter_deposit_public_provident_fund:
-  - text: "Minimum deposit amount of Rs 500/- and maximum of Rs 1,50,000/- in a Financial Year.
-Maximum limit of Rs 1,50,000/- as mentioned above is combined limit for deposit made by Individual in own account and in account opened on behalf of minor
-"
+  - text: 'Minimum deposit amount of Rs 500/- and maximum of Rs 1,50,000/- in a Financial Year. Maximum limit of Rs 1,50,000/- as mentioned above is combined limit for deposit made by Individual in own account and in account opened on behalf of minor '
   utter_fine_public_provident_fund:
-  - text: "If the minimum amount of Rs 500/- is not deposited in any financial year , a penalty of Rs 50/- will be charged."
-
+  - text: If the minimum amount of Rs 500/- is not deposited in any financial year , a penalty of Rs 50/- will be charged.
   utter_loan_facility_public_provident_fund:
-  - text: "Option for loan facility and partial withdrawals:
-50% of the balance can be withdrawn after expiry of 5 years, excluding the first financial year .
-Loan facility can be availed any time between third financial year to sixth financial year i.e. From third financial year up to end of fifth financial year
-"
+  - text: 'Option for loan facility and partial withdrawals: 50% of the balance can be withdrawn after expiry of 5 years, excluding the first financial year . Loan facility can be availed any time between third financial year to sixth financial year i.e. From third financial year up to end of fifth financial year '
   utter_transfer_ppf_to_hdfc_public_provident_fund:
-  - text: "PPF account can be transferred from other bank or Post office to HDFC Bank. In such case, the PPF account will be considered as a continuing account. Below is the process to be followed :
-Customer requires to submit PPF transfer request in the bank/post office where PPF account is held
-The existing bank/Post office will arrange to send the necessary documents along with cheque/DD of the outstanding balance in the PPF account to HDFC Bank branch address provided by the customer
-Process at HDFC Bank Branch
-Once PPF transfer in documents are received at HDFC Bank, branch official will intimate customer about the receipt of documents.
-The customer is required to visit the branch to complete the transfer formalities.
-"
+  - text: 'PPF account can be transferred from other bank or Post office to HDFC Bank. In such case, the PPF account will be considered as a continuing account. Below is the process to be followed : Customer requires to submit PPF transfer request in the bank/post office where PPF account is held The existing bank/Post office will arrange to send the necessary documents along with cheque/DD of the outstanding balance in the PPF account to HDFC Bank branch address provided by the customer Process at HDFC Bank Branch Once PPF transfer in documents are received at HDFC Bank, branch official will intimate customer about the receipt of documents. The customer is required to visit the branch to complete the transfer formalities. '
   utter_open_public_provident_fund:
-  - text: "Open digitally with https://netbanking.hdfcbank.com/netbanking/ or got to your nearest bank"
-
-
-
+  - text: Open digitally with https://netbanking.hdfcbank.com/netbanking/ or got to your nearest bank
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
-
-
+actions:
+- utter_ask_for_contact_info
+- utter_deposit_public_provident_fund
+- utter_eligibility_recurring_deposit
+- utter_how_may_I_hep_you

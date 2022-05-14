@@ -43,91 +43,150 @@ stories:
 - story: recurring deposit features
   steps:
   - intent: ask_features_recurring_deposit
+    entities:
+      - account_type
   - action: utter_features_recurring_deposit
 
 - story: recurring deposit define
   steps:
   - intent: ask_define_recurring_deposit
+    entities:
+    - account_type
   - action: utter_define_recurring_deposit
 
 - story: recurring deposit eligibility
   steps:
   - intent: ask_eligibility_recurring_deposit
+    entities:
+      - account_type
   - action: utter_eligibility_recurring_deposit
 
 #Savings Account
 - story: saving account define and types
   steps:
   - intent: ask_define_savings_account_types
+    entities:
+      - account_type
   - action: utter_define_saving_account_types
 
 - story: open savings account
   steps:
   - intent: ask_opening_saving_account
+    entities:
+      - account_type
   - action: utter_open_savings_account
 
 - story: minimum balance savings account opening
   steps:
   - intent: ask_minimum_balance_saving_account
+    entities:
+      - account_type
   - action: utter_minimum_savings_account
 
 - story: documents required savings account
   steps:
   - intent: ask_documents_required_for_savings_account
+    entities:
+      - account_type
   - action: utter_documents_savings_account
 
 - story: transfer money savings account
   steps:
   - intent: ask_transfer_money_from_savings_account
+    entities:
+      - account_type
   - action: utter_transfer_money_savings_account
 
 #Public Provident Fund
 - story: define public provident fund
   steps:
   - intent: ask_define_public_provident_fund
+    entities:
+      - account_type
   - action: utter_define_public_provident_fund
 
 - story: features of public provident fund
   steps:
   - intent: ask_features_public_provident_fund
+    entities:
+      - account_type
   - action: utter_features_public_provident_fund
 
 - story: eligibility of public provident fund
   steps:
   - intent: ask_eligibility_public_provident_fund
+    entities:
+      - account_type
   - action: utter_eligibility_public_provident_fund
 
 - story:  story_ask_interest_rate_public_provident_fund
   steps:
   - intent: ask_interest_rate_public_provident_fund
+    entities:
+      - account_type
   - action: utter_interest_rate_public_provident_fund
 
 - story:  story_ask_time_period_public_provident_fund
   steps:
   - intent: ask_time_period_public_provident_fund
+    entities:
+      - account_type
   - action: utter_time_period_public_provident_fund
 
 - story:  story_ask_deposit_public_provident_fund
   steps:
   - intent: ask_deposit_public_provident_fund
+    entities:
+      - account_type
   - action: utter_deposit_public_provident_fund
 
 - story:  story_ask_fine_public_provident_fund
   steps:
   - intent: ask_fine_public_provident_fund
+    entities:
+      - account_type
   - action: utter_fine_public_provident_fund
 
 - story:  story_ask_loan_facility_public_provident_fund
   steps:
   - intent: ask_loan_facility_public_provident_fund
+    entities:
+      - account_type
   - action: utter_loan_facility_public_provident_fund
 
 - story:  story_transfer_ppf_to_hdfc_public_provident_fund
   steps:
   - intent: ask_transfer_ppf_to_hdfc_public_provident_fund
+    entities:
+      - account_type
   - action: utter_transfer_ppf_to_hdfc_public_provident_fund
 
 - story:  story_ask_open_public_provident_fund
   steps:
   - intent: ask_open_public_provident_fund
+    entities:
+      - account_type
   - action: utter_open_public_provident_fund
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_ask_for_contact_info
+  - intent: supply_contact_info
+    entities:
+    - email: akshay@gmail.com
+  - slot_was_set:
+    - email: akshay@gmail.com
+  - action: utter_how_may_I_hep_you
+  - intent: ask_deposit_public_provident_fund
+    entities:
+    - account_type: public provident fund
+  - slot_was_set:
+    - account_type: public provident fund
+  - action: utter_deposit_public_provident_fund
+  - intent: ask_eligibility_recurring_deposit
+    entities:
+    - account_type: recurring deposit
+  - slot_was_set:
+    - account_type: recurring deposit
+  - action: utter_eligibility_recurring_deposit

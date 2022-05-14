@@ -1,7 +1,5 @@
 version: "3.1"
-
 nlu:
-
 - intent: supply_contact_info
   examples: |
     - My name is [John](name). email's [john@email.com](email)
@@ -9,7 +7,7 @@ nlu:
     - Yeah sure. I'm [Barbara](name). My email is [barbara@email.com](email)
     - [Susan](name), [susan@email.com](email)
     - Sure. It's [Fred](name). My email is [fred@email.com](email).
-
+    - akshay , [akshay@gmail.com](email)
 - intent: greet
   examples: |
     - hey
@@ -25,7 +23,7 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
-
+    - Hello
 - intent: goodbye
   examples: |
     - cu
@@ -38,7 +36,6 @@ nlu:
     - see you around
     - bye bye
     - see you later
-
 - intent: affirm
   examples: |
     - yes
@@ -47,7 +44,6 @@ nlu:
     - of course
     - that sounds good
     - correct
-
 - intent: deny
   examples: |
     - no
@@ -57,7 +53,6 @@ nlu:
     - don't like that
     - no way
     - not really
-
 - intent: mood_great
   examples: |
     - perfect
@@ -74,7 +69,6 @@ nlu:
     - so so perfect
     - so good
     - so perfect
-
 - intent: mood_unhappy
   examples: |
     - my day was horrible
@@ -91,126 +85,102 @@ nlu:
     - extremly sad
     - so saad
     - so sad
-
 - intent: bot_challenge
   examples: |
     - are you a bot?
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
-
-# Recurring Deposits Intents
 - intent: ask_define_recurring_deposit
   examples: |
-    - What is recurring deposit
-    - Recurring deposit
-    - Define recurring deposit
-
+    - What is [recurring deposit](account_type)
+    - [recurring deposit](account_type)
+    - Define [recurring deposit](account_type)
 - intent: ask_features_recurring_deposit
   examples: |
-    - What are features of recurring deposit
-    - charactersitics of recurring deposit
-    - properties of recurring deposit
-
+    - What are features of [recurring deposit](account_type)
+    - charactersitics of [recurring deposit](account_type)
+    - properties of [recurring deposit](account_type)
 - intent: ask_eligibility_recurring_deposit
   examples: |
-    - What are the eligibility of recurring deposit
-    - qualifiaction for recurring deposit
-    - acceptability for recurring deposit
-
-#Savings Account
+    - What are the eligibility of [recurring deposit](account_type)
+    - qualifiaction for [recurring deposit](account_type)
+    - acceptability for [recurring deposit](account_type)
+    - What is the eligibility of [recurring deposit](account_type)
 - intent: ask_define_savings_account_types
   examples: |
-    - What is savings account
-    - Types of savings account
-    - savings account and its types
-    - different types of savings account
-
+    - What is [savings account](account_type)
+    - Types of [savings account](account_type)
+    - [savings account](account_type) and its types
+    - different types of [savings account](account_type)
 - intent: ask_opening_saving_account
   examples: |
-    - how to open savings account
-    - procedure to open savings account
-
+    - how to open [savings account](account_type)
+    - procedure to open [savings account](account_type)
 - intent: ask_minimum_balance_saving_account
   examples: |
-    - What is the minimum balance to open a savings account
-    - least money required to open savings bank account
-
+    - What is the minimum balance to open a [savings account](account_type)
+    - least money required to open [savings account](account_type)
 - intent: ask_documents_required_for_savings_account
   examples: |
-    - documents required to open a Savings Account
-    - what documents must I have for opening savings account
+    - documents required to open a [savings account](account_type)
+    - what documents must I have for opening [savings account](account_type)
     - what documents are required to open account
-
 - intent: ask_transfer_money_from_savings_account
   examples: |
-    - how can one tranfer money from savings account
-    - way to transfer money from savings account
-    - procedure applied for transfer of money through savings account
-
-#Public Provident Fund
+    - how can one tranfer money from [savings account](account_type)
+    - way to transfer money from [savings account](account_type)
+    - procedure applied for transfer of money through [savings account](account_type)
 - intent: ask_define_public_provident_fund
   examples: |
-    - define public provident fund
-    - what is public provident fund
+    - define [public provident fund](account_type)
+    - what is [public provident fund](account_type)
     - define ppf
     - what is ppf
-
 - intent: ask_features_public_provident_fund
   examples: |
-    - what are the features of public provident fund
+    - what are the features of [public provident fund](account_type)
     - what are the features of ppf
-    - characteristics of public provident fund
+    - characteristics of [public provident fund](account_type)
     - characteristics of ppf
-    - properties of public provident fund
+    - properties of [public provident fund](account_type)
     - properties of ppf
-
 - intent: ask_eligibility_public_provident_fund
   examples: |
-    - eligibility for public provident fund
+    - eligibility for [public provident fund](account_type)
     - eligibility for ppf
-    - requirements for public provident fund
+    - requirements for [public provident fund](account_type)
     - requirements for ppf
-
 - intent: ask_interest_rate_public_provident_fund
   examples: |
-    - what is the interest rate of public provident fund
+    - what is the interest rate of [public provident fund](account_type)
     - what is the interest rate of ppf
-
 - intent: ask_time_period_public_provident_fund
   examples: |
-    - what is the maturity period of public provident fund
-    - what is the extension period of public provident fund
+    - what is the maturity period of [public provident fund](account_type)
+    - what is the extension period of [public provident fund](account_type)
     - what is the maturity period of ppf
     - what is the extension period of ppf
     - what is tenure of ppf
-    - waht is tenure of public provident fund
-
+    - waht is tenure of [public provident fund](account_type)
 - intent: ask_deposit_public_provident_fund
   examples: |
-    - what is the deposit for public provident fund
-    - what is the minimum deposit for public provident fund
-    - what is the maximum deposit for public provident fund
+    - what is the deposit for [public provident fund](account_type)
+    - what is the minimum deposit for [public provident fund](account_type)
+    - what is the maximum deposit for [public provident fund](account_type)
     - what is the deposit for ppf
     - what is the minimum deposit for ppf
     - what is the maximum deposit for ppf
-
+    - what is the deposit for [public provident fund](account_type)
 - intent: ask_fine_public_provident_fund
   examples: |
-    - what is the fine attracted if money not deposited public provident fund
+    - what is the fine attracted if money not deposited [public provident fund](account_type)
     - what is the fine attracted if money not deposited ppf
-
 - intent: ask_loan_facility_public_provident_fund
   examples: |
-    - What are the loan facility available for public provident fund
-    - What are the partial withdrawals available for public providnet fund
-
+    - What are the loan facility available for [public provident fund](account_type)
+    - What are the partial withdrawals available for [public provident fund](account_type)
 - intent: ask_transfer_ppf_to_hdfc_public_provident_fund
   examples: |
     - How can I transfer my public provident fund account to hdfc account
     - How can I transfer my ppf account to hdfc account
- 
-#  - intent: ask_open_public_provident_fund
-#   examples: |
-#     - How to open public provident fund
-#     - How to open ppf
