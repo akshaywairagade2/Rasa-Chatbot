@@ -5,10 +5,13 @@ stories:
 - story: user supplies customer info
   steps:
   - intent: greet
-  - action: utter_ask_for_contact_info
-  - intent: supply_contact_info
+  - action: utter_supply_name_info
+  - intent: ask_supply_name_info
     entities:
     - name
+  - action : utter_supply_email_info
+  - intent: ask_supply_email_info
+    entities:
     - email
   - action: utter_how_may_I_hep_you
 
@@ -238,25 +241,3 @@ stories:
       - account_type
   - action: utter_open_public_provident_fund
 
-- story: interactive_story_1
-  steps:
-  - intent: greet
-  - action: utter_ask_for_contact_info
-  - intent: supply_contact_info
-    entities:
-    - email: akshay@gmail.com
-  - slot_was_set:
-    - email: akshay@gmail.com
-  - action: utter_how_may_I_hep_you
-  - intent: ask_deposit_public_provident_fund
-    entities:
-    - account_type: public provident fund
-  - slot_was_set:
-    - account_type: public provident fund
-  - action: utter_deposit_public_provident_fund
-  - intent: ask_eligibility_recurring_deposit
-    entities:
-    - account_type: recurring deposit
-  - slot_was_set:
-    - account_type: recurring deposit
-  - action: utter_eligibility_recurring_deposit

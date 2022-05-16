@@ -1,13 +1,16 @@
 version: "3.1"
 nlu:
-- intent: supply_contact_info
+- intent: ask_supply_name_info
   examples: |
-    - My name is [John](name). email's [john@email.com](email)
-    - name: [David](name) email: [david@email.com](email)
-    - Yeah sure. I'm [Barbara](name). My email is [barbara@email.com](email)
-    - [Susan](name), [susan@email.com](email)
-    - Sure. It's [Fred](name). My email is [fred@email.com](email).
-    - akshay , [akshay@gmail.com](email)
+    - My name is [Akshay Wairagade](name)
+    - [Akshay Wairagade](name)
+    - My name is [Akshay](name)
+    - [Akshay](name)
+- intent: ask_supply_email_info
+  examples: |
+    - My email is [akshay@gmail.com](email)
+    - [akshay@gmail.com](email)
+    - Sure , it's [akshay@gmail.com](email)
 - intent: greet
   examples: |
     - hey

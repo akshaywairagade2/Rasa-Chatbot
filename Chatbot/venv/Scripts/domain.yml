@@ -39,7 +39,8 @@ intents:
 - greet
 - mood_great
 - mood_unhappy
-- supply_contact_info
+- ask_supply_name_info
+- ask_supply_email_info
 entities:
 - email
 - account_type
@@ -63,8 +64,10 @@ slots:
 responses:
   utter_how_may_I_hep_you:
   - text: How may I help you
-  utter_ask_for_contact_info:
-  - text: Hello! Could you please provide your contact information?
+  utter_supply_name_info:
+  - text: Hello! Could you please tell your name?
+  utter_supply_email_info:
+  - text: Could you please tell your email id?
   utter_acknowledge_provided_info:
   - text: Thanks for providing your info!
   utter_greet:
@@ -192,8 +195,4 @@ responses:
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
-actions:
-- utter_ask_for_contact_info
-- utter_deposit_public_provident_fund
-- utter_eligibility_recurring_deposit
-- utter_how_may_I_hep_you
+
