@@ -91,6 +91,8 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
+# Recurring Bank Account
 - intent: ask_define_recurring_deposit
   examples: |
     - What is [recurring deposit](account_type)
@@ -107,6 +109,58 @@ nlu:
     - qualifiaction for [recurring deposit](account_type)
     - acceptability for [recurring deposit](account_type)
     - What is the eligibility of [recurring deposit](account_type)
+- intent: ask_deposit_recurring_deposit
+  examples: |
+    - What is deposit for [recurring deposit](account_type)
+    - what is maximum deposit for [recurring deposit](account_type)
+    - what is minimum deposit for [recurring deposit](account_type)
+- intent: ask_tenure_recurring_deposit
+  examples: |
+    - what is maturity period of [recurring deposit](account_type)
+    - what is the extension of [recurring deposit](account_type)
+    - what is the tenure of [recurring deposit](account_type)
+- intent: ask_installment_recurring_deposit
+  examples: |
+    - what are the conditions of payment of installments on [recurring deposit](account_type)
+    - process for deposit of money in [recurring deposit](account_type)
+    - how much installments can be kept overdue in [recurring deposit](account_type)
+    - what is process of partial installments in [recurring deposit](account_type)
+- intent: ask_lock_in_period_recurring_deposit
+  examples: |
+    - what is lock in period for [recurring deposit](account_type)
+    - what is the policy of lock in period [recurring deposit](account_type)
+    - what interest is paid in case of premature [recurring deposit](account_type)
+- intent: ask_maturity_recurring_deposit
+  examples: |
+    - how much interest is paid on maturity of [recurring deposit](account_type)
+    - will my interest decrease on maturity of [recurring deposit](account_type)
+    - what if i do not pay my installments on time of [recurring deposit](account_type)
+- intent: ask_overdue_installments_recurring_deposit
+  examples: |
+    - when will bank close my [recurring deposit](account_type)
+    - what is the maximum period of overdue installments in [recurring deposit](account_type)
+    - does bank reserve the right to close my [recurring deposit](account_type)
+- intent: ask_nomination_facility_recurring_deposit
+  examples: |
+    - what is the nomination facility available for booking a [recurring deposit](account_type) with single name
+    - what is the nomination facility available for booking a [recurring deposit](account_type) with joint holders name
+    - what is the nomination facility available for existing user for booking a [recurring deposit](account_type) with single name
+    - what is the nomination facility available for existing user for booking a [recurring deposit](account_type) with joint holders name
+- intent: ask_interest_rate_recurring_deposit
+  examples: |
+    - what are the interest rates on [recurring deposit](account_type)
+    - how much interest do we get on [recurring deposit](account_type)
+    - what is the rate of interest of [recurring deposit](account_type)
+- intent: ask_sms_for_recurring_deposits
+  examples: |
+    - procedure to book [recurring deposit](account_type) via sms
+    - how to book my [recurring deposit](account_type) with sms
+- intent: ask_transaction_limit_recurring_deposit
+  examples: |
+    - what are maximum number of transactions we can do on [recurring deposit](account_type)
+    - what is the transaction limit on [recurring deposit](account_type)
+
+# Savings Bank Account
 - intent: ask_define_savings_account_types
   examples: |
     - What is [savings account](account_type)
@@ -131,6 +185,9 @@ nlu:
     - how can one tranfer money from [savings account](account_type)
     - way to transfer money from [savings account](account_type)
     - procedure applied for transfer of money through [savings account](account_type)
+
+
+# Public Provident Fund
 - intent: ask_define_public_provident_fund
   examples: |
     - define [public provident fund](account_type)

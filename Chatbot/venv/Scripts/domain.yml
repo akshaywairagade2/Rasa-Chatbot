@@ -1,24 +1,38 @@
 version: '3.1'
 intents:
 - affirm
-- ask_define_public_provident_fund
+# recurring deposits
 - ask_define_recurring_deposit
-- ask_define_savings_account_types
-- ask_deposit_public_provident_fund
-- ask_documents_required_for_savings_account
-- ask_eligibility_public_provident_fund
-- ask_eligibility_recurring_deposit
-- ask_features_public_provident_fund
 - ask_features_recurring_deposit
+- ask_eligibility_recurring_deposit
+- ask_deposit_recurring_deposit
+- ask_tenure_recurring_deposit
+- ask_installment_recurring_deposit
+- ask_lock_in_period_recurring_deposit
+- ask_maturity_recurring_deposit
+- ask_overdue_installments_recurring_deposit
+- ask_nomination_facility_recurring_deposit
+- ask_interest_rate_recurring_deposit
+- ask_sms_for_recurring_deposits
+- ask_transaction_limit_recurring_deposit
+# savings account
+- ask_opening_saving_account
+- ask_define_savings_account_types
+- ask_documents_required_for_savings_account
+# public provident fund
+- ask_eligibility_public_provident_fund
+- ask_features_public_provident_fund
+- ask_define_public_provident_fund
+- ask_deposit_public_provident_fund
 - ask_fine_public_provident_fund
 - ask_interest_rate_public_provident_fund
 - ask_loan_facility_public_provident_fund
 - ask_minimum_balance_saving_account
 - ask_open_public_provident_fund
-- ask_opening_saving_account
 - ask_time_period_public_provident_fund
 - ask_transfer_money_from_savings_account
 - ask_transfer_ppf_to_hdfc_public_provident_fund
+#general
 - bot_challenge
 - deny
 - goodbye
@@ -66,6 +80,8 @@ responses:
   - text: Bye
   utter_iamabot:
   - text: I am a bot, powered by Rasa.
+
+  # Recurring Deposits
   utter_define_recurring_deposit:
   - text: A recurring deposit means making regular deposits. It is a service provided by many banks where people can make regular deposits and earn decent returns on their investments
   utter_features_recurring_deposit:
@@ -79,6 +95,51 @@ responses:
       Hindu Undivided Families
       Private & Public Limited Companies
       Trust & Societies.
+  utter_deposit_recurring_deposit:
+  - text: An investment as small as Rs. 1000 (and in multiples of Rs. 100 there after) or as large as Rs. 1,99,99,900 per month
+
+  utter_tenure_recurring_deposit:
+  - text: A minimum tenure of 6 months (and in multiples of 3 months thereafter) up to a maximum tenure of 10 years. \n For NRI customers, the minimum tenure of RD is 12 months.For a much smaller investment per month, get interest rates equal to that of regular Fixed Deposits.
+
+  utter_installment_recurring_deposit:
+  - text: The installment amount once fixed cannot be altered at any later date.In case of more than one installment being overdue at the time of payment , upto 6 installments can be recovered from the linked account if sufficient balance is available.If more than one installment is overdue at the time of payment, the paid installment, if sufficient to cover only that one installment will be appropriated towards the first or earliest installment overdue.Partial payment of installments will not be permitted.
+
+  utter_lock_in_period_recurring_deposit:
+  - text: The Recurring Deposit account has a minimum lock-in period of one month.In the case of premature closure within a month, no interest shall be paid to the depositor and only his principal amount shall be returned.
+
+  utter_maturity_recurring_deposit:
+  - text: "Interest is paid only on maturity.\n The Deposit shall be due for repayment and shall mature on completion of the contracted tenure, even if there are installments still to be paid.\n The maturity amount mentioned on the Recurring deposit confirmation advice is subject to the payment of all installments on timeIn case of any delay in the payment of scheduled installments, the maturity amount shall change"
+
+  utter_overdue_installments_recurring_deposit:
+  - text: If frequent defaults (non-payments) are observed in monthly installments, and six installments fall in arrears, the Bank reserves the right to close the RD account. The interest rate applicable on such closed accounts will be as per the premature withdrawal policy of the Bank.
+
+  utter_nomination_facility_recurring_deposit:
+  - text: "If you are booking a Recurring Deposit on NetBanking on a single name, then you can either select the nomination made in the base Savings account or add a new nominee. \n If you are booking a Recurring Deposit on NetBanking in a Joint name, then you can only select the nomination made in the base Savings account. \n In a joint holding Recurring Deposit, if you wish to add a new nominee, then you will need to visit the branch.\n  For existing single holding Recurring Deposits, Customers can add a new nominee or modify a nominee through NetBanking instantly.For existing joint holding Recurring Deposits, Customers can download the filled Nomination form from NetBanking, take signatures from all holders, and submit it at nearest HDFC bank branch, for updating in our systems."
+
+  utter_interest_rate_recurring_deposit:
+  - text: Refer to this https://www.hdfcbank.com/personal/resources/rates for interest rates
+
+  utter_sms_for_recurring_deposits:
+  - text: |- 
+      Book Recurring deposit via SMS
+      Book Recurring deposit instantly by sending text message to 5676712
+      Text Format to be used
+      Resultant Action
+      BOOKRD
+      RD will be booked with Rs 1000 for 12 months by default
+      BOOKRD <Amount> 
+      RD will be booked for the amount mentioned with default tenure as 12 months
+      BOOKRD 8000 to 5676712
+      BOOKRD <Amount> <Tenure>
+      RD will be booked for mentioned amount & tenure
+      BOOKRD 10000  24M to 5676712
+
+  utter_transaction_limit_recurring_deposit:
+  - text: Transaction Limit- Max 5 successful transactions per day for RD
+
+
+
+  # Savings Account
   utter_define_saving_account_types:
   - text: |-
       A Savings Account is a deposit account opted for by many who wish to save a certain part of their earnings. It is a type of bank account wherein you can park your funds, earn interest on the same and also withdraw money at any time. It provides the convenience of liquid funds.
@@ -106,6 +167,8 @@ responses:
       Here is a list of acceptable identity/address proof documents. Valid Passport Voter's Identity Card issued by the Election Commission of India Valid Permanent Driving license Aadhaar Job card issued by NREGA duly signed by an officer of the State Government Letter issued by the National Population Register containing details of name and address 
   utter_transfer_money_savings_account:
   - text: There are couple of ways to transfer money from your saving bank account. Firstly, you can use a banking mobile app to transfer funds almost instantly, from your Savings Account to that of another individual. Then there is the option of using NetBanking facility to transfer money quickly and easily via the digital mode. You also have the option of visiting a bank branch in person and transferring funds from your bank account.
+
+  # Public Provident Fund
   utter_define_public_provident_fund:
   - text: Public Provident Fund (PPF) scheme is a popular long term investment option backed by Government of India which offers safety with attractive interest rate and returns that are fully exempted from Tax.
   utter_features_public_provident_fund:
