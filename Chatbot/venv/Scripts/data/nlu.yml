@@ -244,3 +244,49 @@ nlu:
   examples: |
     - How can I transfer my public provident fund account to hdfc account
     - How can I transfer my ppf account to hdfc account
+
+# NEFT
+- intent: ask_define_neft
+  examples: | 
+    - what is neft
+    - define neft
+    - what is national electronic funds tranfer
+    - when neft service is available
+- intent: ask_features_neft
+  examples: |
+    - what are the features of neft
+    - characteristics of neft
+- intent: ask_charges_neft
+  examples: |
+    - what are the charges of neft 
+    - what amount to pay for transfer of the amount
+- intent: ask_credit_card_bills_neft
+  examples: |
+    - can I pay credit card bills with neft
+    - can I set up recurring payments via neft
+- intent: ask_timings_neft
+  examples: |
+    - what are timings available for transfer of large amounts via neft
+    - what is the maximum amount I can pay via neft
+    - what is the process of new beneficiary addition
+
+# RTGS
+
+- intent: ask_define_rtgs
+  examples: |
+    - define rtgs
+    - what is rtgs
+- intent: ask_limit_of_transactions_rtgs
+  examples: |
+    - what is the maximum amount we can pay through rtgs
+    - what is the maximum limit for online transactions in rtgs
+    - what is limit for transaction from branches with rtgs
+    - where can we send money through rtgs
+- intent: ask_charges_rtgs
+  examples: |
+    - what is the amount charged on rtgs
+    - what fees is charged on rtgs
+- intent: ask_timings_rtgs
+  examples: |
+    - what are the timings to carry out rtgs
+    - when is the facility of rtgs open

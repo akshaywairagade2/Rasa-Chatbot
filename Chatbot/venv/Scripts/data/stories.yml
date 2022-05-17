@@ -241,3 +241,51 @@ stories:
       - account_type
   - action: utter_open_public_provident_fund
 
+# NEFT
+
+- story: story_ask_define_neft
+  steps:
+  - intent: ask_define_neft
+  - action: utter_define_neft
+
+- story: story_ask_features_neft
+  steps:
+  - intent: ask_features_neft
+  - action: utter_features_neft
+
+- story: story_ask_charges_neft
+  steps:
+  - intent: ask_charges_neft
+  - action: utter_charges_neft
+
+- story: story_ask_credit_card_bills_neft
+  steps:
+  - intent: ask_credit_card_bills_neft
+  - action: utter_credit_card_bills_neft
+
+- story: story_ask_timings_neft
+  steps:
+  - intent: ask_timings_neft
+  - action: utter_timings_neft
+
+
+# RTGS
+- story: story_ask_define_rtgs
+  steps:
+  - intent: ask_define_rtgs
+  - action: utter_define_rtgs
+
+- story: story_ask_limit_of_transactions_rtgs
+  steps:
+  - intent: ask_limit_of_transactions_rtgs
+  - action: utter_limit_of_transactions_rtgs
+
+- story: story_ask_charges_rtgs
+  steps:
+  - intent: ask_charges_rtgs
+  - action: utter_charges_rtgs
+
+- story: story_ask_timings_rtgs
+  steps:
+  - intent: ask_timings_rtgs
+  - action: utter_timings_rtgs

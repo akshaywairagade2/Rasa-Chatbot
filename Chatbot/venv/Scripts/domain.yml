@@ -32,6 +32,17 @@ intents:
 - ask_time_period_public_provident_fund
 - ask_transfer_money_from_savings_account
 - ask_transfer_ppf_to_hdfc_public_provident_fund
+#neft
+- ask_define_neft
+- ask_features_neft
+- ask_charges_neft
+- ask_credit_card_bills_neft
+- ask_timings_neft
+#rtgs
+- ask_define_rtgs
+- ask_limit_of_transactions_rtgs
+- ask_charges_rtgs
+- ask_timings_rtgs
 #general
 - bot_challenge
 - deny
@@ -192,6 +203,29 @@ responses:
   - text: 'PPF account can be transferred from other bank or Post office to HDFC Bank. In such case, the PPF account will be considered as a continuing account. Below is the process to be followed : Customer requires to submit PPF transfer request in the bank/post office where PPF account is held The existing bank/Post office will arrange to send the necessary documents along with cheque/DD of the outstanding balance in the PPF account to HDFC Bank branch address provided by the customer Process at HDFC Bank Branch Once PPF transfer in documents are received at HDFC Bank, branch official will intimate customer about the receipt of documents. The customer is required to visit the branch to complete the transfer formalities. '
   utter_open_public_provident_fund:
   - text: Open digitally with https://netbanking.hdfcbank.com/netbanking/ or got to your nearest bank
+
+# NEFT
+  utter_define_neft: 
+  - text: "National Electronic Funds Transfer (NEFT) is an Indian system of electronic transfer of money from one bank or bank branch to another.\n The banks or their branches that support such transactions have to participate in the NEFT network"
+  utter_features_neft:
+  - text: "Quick & paperless \n Avoid delays due to cheques or demand drafts \n No paperwork, documentation or approval required"
+  utter_charges_neft:
+  - text: "Transaction charges for NEFT from HDFC Bank Branches -\n1) Upto Rs 1,00,000: Rs 2 + Applicable GST\n2) Above Rs 1,00,000: Rs 10 + Applicable GST"
+  utter_credit_card_bills_neft:
+  - text: "Use NEFT to pay your Credit Card bills \n Set up account for recurring payments via NEFT"
+  utter_timings_neft:
+  - text: "NEFT is available 24*7 . \n 7am to 7pm on RBI working day : The maximum amount of funds that can be transferred per day is as per the customer's TPT limit (Maximum upto Rs.50 Lakhs)\n From 7pm - 7am on working days & all holidays (including 2nd & 4th Saturdays and Sundays) : A maximum of Rs.2.00 lacs per transaction can be transferred subject to TPT limit. (Multiples of Rs 2 Lacs upto the TPT limit chosen by the customer. Maximum upto Rs. 50 Lakh)\n New Beneficiary addition (online): While adding a new beneficiary you can make transaction of maximum of Rs.50,000/- ( in full or parts inclusive of failed attempt ) during the first 24 hrs "
+
+#RTGS
+  utter_define_rtgs:
+  - text: "The term real-time gross settlement (RTGS) refers to a funds transfer system that allows for the instantaneous transfer of money and/or securities. RTGS is the continuous process of settling payments on an individual order basis without netting debits with credits across the books of a central bank. "
+  utter_limit_of_transactions_rtgs:
+  - text: "Amounts greater than ₹ 2 lakhs \n No upper limit for RTGS transactions from branches \n For Online transaction, the maximum amount of funds that can be transferred per day is as per the customer's TPT limit (Maximum upto Rs. 50 Lakh)\n Send money to any RTGS-enabled bank branch in India \n Choose from 100,000-plus branches across 20,000 locations"
+  utter_charges_rtgs:
+  - text: "Transaction charges for RTGS from HDFC Bank Branches - Rs 15 + Applicable GST"
+  utter_timings_rtgs:
+  - text: "RTGS is now be available 24/7 (except 11.30 PM to 00:30 AM, due to cut-off)."
+
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
